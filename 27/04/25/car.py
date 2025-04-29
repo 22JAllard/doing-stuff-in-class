@@ -5,10 +5,10 @@ class Car:
         self.mileage = 0
         self.dateofinspection = None
 
-    def getinfo(self):
+    def getinfo(self): #could have split into get_reg, etc
         return self.registration, self.make, self.mileage, self.dateofinspection
     
-    def set_inspection(self, dateofinspection):
+    def set_inspection(self, dateofinspection): #should also take in mileage
         self.dateofinspection = dateofinspection
 
 new_car = Car("120984912", "Aiasfhigia")
