@@ -1,0 +1,40 @@
+class NodeClass():
+    def __init__(self):
+        self.data = None
+
+    def setdata(self, data):
+        self.data = data
+    
+    def getdata(self):
+        print(self.data)
+
+class StackClass():
+    def __init__(self, maxsize):
+        self.topofstackpointer = 0
+        self.maxsize = maxsize
+        self.stack = []
+        self.size = 0
+
+    def pushonstack(self, data):
+        if self.size < self.maxsize:
+            newnode = NodeClass()
+            newnode.setdata(data)
+            self.stack[self.topofstackpointer] = newnode
+            self.topofstackpointer += 1
+            self.size += 1
+
+    def popfromstack(self):
+        self.top = self.stack[self.topofstackpointer] 
+        self.stack[self.topofstackpointer] = None
+        print(self.top)
+        return self.top
+    
+stack = StackClass()
+stack.pushonstack("A")
+stack.pushonstack("B")
+stack.pushonstack("C")
+
+stack.pushonstack()
+stack.pushonstack()
+stack.pushonstack()
+
